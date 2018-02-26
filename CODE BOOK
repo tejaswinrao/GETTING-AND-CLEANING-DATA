@@ -1,51 +1,18 @@
-Human Activity Recognition Using Smartphones Dataset
+# Project course Code book
+This file describes the variables of 'average_data' dataset, obtained after performing run_analysis.R
+'average_data' contains 180 observations of 50 variables.
 
-==================================================================
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+The data are based on the data set "Human Activity Recognition Using Smartphones Dataset - Version 1.0"
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
+Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. 
+Using its embedded accelerometer and gyroscope, 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz were captured. 
+The experiments have been video-recorded to label the data manually. 
+The sensor signals (accelerometer and gyroscope) were pre-processed.
 
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
+For each record it is provided:
 
-Feature Selection 
-=================
-
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
-
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
-
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
-
-These signals were used to estimate variables of the feature vector for each pattern:  
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
-
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
-
-The set of variables that were estimated from these signals are: 
-
-mean(): Mean value
-std(): Standard deviation
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-
-Activities Recorded
-=================
-
-Data was collected for the following six activities.
-
+[1] "Activity"
+Character in
 WALKING
 WALKING_UPSTAIRS
 WALKING_DOWNSTAIRS
@@ -53,10 +20,106 @@ SITTING
 STANDING
 LAYING
 
-Test Subjects
-=================
-Data was recorded from 30 separate test subjects while performing each task.
+[2] "Subject ID"
+Identifier of the subject who carried out the experiment.
+Integer in 1:30
 
-Summary Dataset
-=================
-The file named ÒSummary_set.csvÓ contains only the average for each variable for each subject and activity.
+For following variables, the average per Subject ID and Activity is given:
+
+[3] "Mean value of Body Accelerometer signal - X axis"
+[4] "Mean value of Body Accelerometer signal - Y axis"
+[5] "Mean value of Body Accelerometer signal - Z axis"
+Mean value of 3 axials signal from accelerometer (body acceleration) measurements in X, Y and Z direction.
+Numeric
+
+[6] "Standard deviation of Body Accelerometer signal - X axis"
+[7] "Standard deviation of Body Accelerometer signal - Y axis"
+[8] "Standard deviation of Body Accelerometer signal - Z axis"
+Standard deviation of 3 axials signal from accelerometer (body acceleration) measurements in X, Y and Z direction.
+Numeric
+
+[9] "Mean value of Gravity Accelerometer signal - X axis"
+[10] "Mean value of Gravity Accelerometer signal - Y axis"
+[11] "Mean value of Gravity Accelerometer signal - Z axis"
+Mean value of 3 axials signal from accelerometer (gravity acceleration) measurements in X, Y and Z direction.
+Numeric
+
+[12] "Standard deviation of Gravity Accelerometer signal - X axis"
+[13] "Standard deviation of Gravity Accelerometer signal - Y axis"
+[14] "Standard deviation of Gravity Accelerometer signal - Z axis"
+Standard deviation of 3 axials signal from accelerometer (gravity acceleration) measurements in X, Y and Z direction.
+Numeric
+
+[15] "Mean value of Body Accelerometer Jerk signal - X axis"
+[16] "Mean value of Body Accelerometer Jerk signal - Y axis"
+[17] "Mean value of Body Accelerometer Jerk signal - Z axis"
+Mean value of time derived body linear acceleration from accelerometer in X, Y and Z direction.
+Numeric
+
+[18] "Standard deviation of Body Accelerometer Jerk signal - X axis"
+[19] "Standard deviation of Body Accelerometer Jerk signal - Y axis"
+[20] "Standard deviation of Body Accelerometer Jerk signal - Z axis"
+Standard deviation of time derived body linear acceleration from accelerometer in X, Y and Z direction.
+Numeric
+
+[21] "Mean value of Body Gyrometer signal - X axis"
+[22] "Mean value of Body Gyrometer signal - Y axis"
+[23] "Mean value of Body Gyrometer signal - Z axis"
+Mean value of 3 axials signal from gyrometer measurements in X, Y and Z direction.
+Numeric
+
+[24] "Standard deviation of Body Gyrometer signal - X axis"
+[25] "Standard deviation of Body Gyrometer signal - Y axis"
+[26] "Standard deviation of Body Gyrometer signal - Z axis"
+Standard deviation of 3 axials signal from gyrometer measurements in X, Y and Z direction.
+Numeric
+
+[27] "Mean value of Body Gyrometer Jerk signal - X axis"
+[28] "Mean value of Body Gyrometer Jerk signal - Y axis"
+[29] "Mean value of Body Gyrometer Jerk signal - Z axis"
+Mean value of time derived body linear acceleration from gyrometer in X, Y and Z direction.
+Numeric
+
+[30] "Standard deviation of Body Gyrometer Jerk signal - X axis"
+[31] "Standard deviation of Body Gyrometer Jerk signal - Y axis"
+[32] "Standard deviation of Body Gyrometer Jerk signal - Z axis"
+Standard deviation of time derived body linear acceleration from gyrometer in X, Y and Z direction.
+Numeric
+
+[33] "Mean value of FFT to Body Accelerometer signal - X axis"
+[34] "Mean value of FFT to Body Accelerometer signal - Y axis"
+[35] "Mean value of FFT to Body Accelerometer signal - Z axis"
+Mean value of Fast Fourier Transform (FFT) applied to 3 axials signal from accelerometer (body acceleration) measurements in X, Y and Z direction.
+Numeric
+
+[36] "Standard deviation of FFT to Body Accelerometer signal - X axis"
+[37] "Standard deviation of FFT to Body Accelerometer signal - Y axis"
+[38] "Standard deviation of FFT to Body Accelerometer signal - Z axis"
+Standard deviation of Fast Fourier Transform (FFT) applied to 3 axials signal from accelerometer (body acceleration) measurements in X, Y and Z direction.
+Numeric
+
+[39] "Mean value of FFT to Body Accelerometer Jerk signal - X axis"
+[40] "Mean value of FFT to Body Accelerometer Jerk signal - Y axis"
+[41] "Mean value of FFT to Body Accelerometer Jerk signal - Z axis"
+Mean value of Fast Fourier Transform (FFT) applied to time derived body linear acceleration from accelerometer in X, Y and Z direction.
+Numeric
+
+[42] "Standard deviation of FFT to Body Accelerometer Jerk signal - X axis"
+[43] "Standard deviation of FFT to Body Accelerometer Jerk signal - Y axis"
+[44] "Standard deviation of FFT to Body Accelerometer Jerk signal - Z axis"
+Standard deviation of Fast Fourier Transform (FFT) applied to time derived body linear acceleration from accelerometer in X, Y and Z direction.
+Numeric
+
+[45] "Mean value of FFT to Body Gyrometer signal - X axis"
+[46] "Mean value of FFT to Body Gyrometer signal - Y axis"
+[47] "Mean value of FFT to Body Gyrometer signal - Z axis"
+Mean value of Fast Fourier Transform (FFT) applied to time derived body linear acceleration from gyrometer in X, Y and Z direction.
+Numeric
+
+[48] "Standard deviation of FFT to Body Gyrometer signal - X axis"         
+[49] "Standard deviation of FFT to Body Gyrometer signal - Y axis"         
+[50] "Standard deviation of FFT to Body Gyrometer signal - Z axis"
+Standard deviation of Fast Fourier Transform (FFT) applied to time derived body linear acceleration from gyrometer in X, Y and Z direction.
+Numeric
+
+Note that run_analysis.R also provides a data frame 'data', containing the 10299 observations of 50 variables, ie data are not average per ID and Activity.
